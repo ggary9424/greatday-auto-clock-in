@@ -8,11 +8,12 @@
 
 ### Install
 ```bash
-# Clone the repository
+# Clone the repository and change the working directory
 git clone https://github.com/ggary9424/greatday-auto-clock-in.git
+cd greatday-auto-clock-in
 
 # Create a heroku app for the repository
-heroku create $APP_NAME
+heroku create $YOUR_APP_NAME
 
 # Set environment variables
 heroku config:set AUTHORIZATION=fake_authorization
