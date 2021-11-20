@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.6",
     "express": "^4.17.1",
-    "helmet": "^4.6.0"
+    "got": "^11.8.3",
+    "helmet": "^4.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1"
   }
 }
