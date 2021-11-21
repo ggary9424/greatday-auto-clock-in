@@ -28,7 +28,7 @@ heroku open
 # Add the scheduler addon
 heroku addons:create scheduler:standard
 
-# Add the GUI of the scheduler configuration
+# Open the GUI of the scheduler configuration
 heroku addons:open scheduler
 
 # Configure your clock-in time on Heroku GUI...
