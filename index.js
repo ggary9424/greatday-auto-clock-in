@@ -31,6 +31,12 @@ app.get("/attendance-list", async (req, res) => {
     if (otherStatus.includes("ABS")) {
       return "缺席";
     }
+    if (otherStatus.includes("OFF")) {
+      return "休假";
+    }
+    if (otherStatus.includes("PRS")) {
+      return "出席";
+    }
     return "未知";
   };
 
