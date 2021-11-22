@@ -43,9 +43,14 @@ const TIMEZONE_TAIPEI = "Asia/Taipei";
     const currentTimeMoment = moment(currentTimeString);
     const workStartTimeMoment = moment(todayAttendance.starttime);
 
-    // There are some bugs on Greatday here. The endtime gave is not as we expected.
-    if (currentTimeMoment.diff(workStartTimeMoment, "hours") > 9) {
+    // There are some bugs on Greatday here.
+    // The endtime gave to us somehow is plused 9 hours. (I think it is for display usage)
+    // So we let current time plus 9 hours here too.
+    currentTimeMoment.add(9, 'hours');
+
+    if (currentTimeMoment.diff(workStartTimeMoment, "minutes") > 9 * 60) {
       console.log("clocking out...");
+      await greatday.addToTemp();
       console.log("clocked out...");
     } else {
       console.log("It is still in the working time. Cheer up!!!");
