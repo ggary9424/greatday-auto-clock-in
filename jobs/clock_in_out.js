@@ -26,7 +26,7 @@ const TIMEZONE_TAIPEI = "Asia/Taipei";
     return;
   }
 
-  if (_.isEmpty(todayAttendance)) {
+  if (_.isEmpty(todayAttendance) || _.get(todayAttendance, 'starttime', null) === null) {
     const scheduledWorkStartTimeMoment = moment
       .tz(TIMEZONE_TAIPEI)
       .startOf("day")
